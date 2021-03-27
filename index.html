@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8">
+        <script src="js/match.min.js"></script>
+        <script src="js/jq.min.js"></script>
+        <script src="js/highscores.js"></script>
+        <title>Memory Blocks</title>
+    </head>
+    <body class="unselectable">
+        <div class="container">
+            <main>
+                <div class="game-controls text-center">
+                    <button class="retro-border toggle-colors">Toggle Colors</button>
+                    <button class="retro-border restart">New Game</button>
+                    <button class="retro-border show-highscores">High Scores</button>
+                    
+                    <button class="retro-border btn-skill">
+                        Skill:
+                        <select class="retro-border">
+                            <option value="little">Little board</option>
+                            <option value="big">Big board</option>
+                        </select>
+                    </button>
+                    <button class="retro-border btn-about">About &amp; How to play</button>
+                </div>
+                <div class="background background-easy">
+                </div>
+                <div class="congrats retro-window retro-border hide">
+                    <div class="title">Congratulations!</div>
+                    <div class="enter-name hide">
+                        <p class="text-left">You have one of the top scores.<br>
+                        Please enter your name...</p>
+                        <form class="text-center">
+                            <input type="text" class="user-name">
+                            <button class="retro-border ok-btn">OK</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="window-about retro-window retro-border">
+                    <div class="title">Welcome to Memory Blocks!</div>
+                    <p>Tiles are randomly dealt with the picture side down.</p>
+                    <p>Flip over any two tiles by clicking on them. If the pictures on the tiles are identical then they will disappear. If they are not identical then they will be flipped back to picture-side-down.</p>
+                    <p>Continue flipping pairs until all matches have been found and there are no more tiles.</p>
+                    <p>You are scored two ways. First, by the number of seconds it takes for you to find all of the matches. Second, by the total number of pairs you need to flip in order to find all of the matches.</p>
+                    <p>The top scores are displayed on the high score list.</p>
+                    <p>Good luck!</p>
+                    <div class="text-center">
+                    
+                    
+                    <button class="retro-border close-about">OK</button>
+                    </div>
+                </div>
+
+                <div class="highscores retro-window retro-border">
+                    <div class="title"><span class="game-skill-type">Little</span> Board High Scores</div>
+                    <div class="board fastest-times">
+                        <div class="board-title">The Fastest Times</div>
+                        <table border="0">
+                            <tbody>
+                                <tr>
+                                    <td>1.</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>Seconds</td>
+                                    <td></td>
+                                    <td>Total Pairs Flipped</td>
+                                </tr>
+                                <tr>
+                                    <td>2.</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>Seconds</td>
+                                    <td></td>
+                                    <td>Total Pairs Flipped</td>
+                                </tr>
+                                <tr>
+                                    <td>3.</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>Seconds</td>
+                                    <td></td>
+                                    <td>Total Pairs Flipped</td>
+                                </tr>
+                                <tr>
+                                    <td>4.</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>Seconds</td>
+                                    <td></td>
+                                    <td>Total Pairs Flipped</td>
+                                </tr>
+                                <tr>
+                                    <td>5.</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>Seconds</td>
+                                    <td></td>
+                                    <td>Total Pairs Flipped</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="board fewest-pairs">
+                        <div class="board-title">The Fewest Total Pairs Flipped</div>
+                        <table border="0">
+                            <tbody>
+                                <tr>
+                                    <td>1.</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>Seconds</td>
+                                    <td></td>
+                                    <td>Total Pairs Flipped</td>
+                                </tr>
+                                <tr>
+                                    <td>2.</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>Seconds</td>
+                                    <td></td>
+                                    <td>Total Pairs Flipped</td>
+                                </tr>
+                                <tr>
+                                    <td>3.</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>Seconds</td>
+                                    <td></td>
+                                    <td>Total Pairs Flipped</td>
+                                </tr>
+                                <tr>
+                                    <td>4.</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>Seconds</td>
+                                    <td></td>
+                                    <td>Total Pairs Flipped</td>
+                                </tr>
+                                <tr>
+                                    <td>5.</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>Seconds</td>
+                                    <td></td>
+                                    <td>Total Pairs Flipped</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="controls">
+                        <button class="retro-border ok-btn">OK</button>
+                        <button class="retro-border reset-btn">Reset Scores</button>
+                    </div>
+                </div>
+                <div class="game-info">
+                    <small>Time: <span class="time">0</span> Total pairs flipped: <span class="pairs-count">0</span></small>
+                </div>
+                <div class="game wrap">
+                </div>
+            </main>
+            <div class="templates hide">
+                <div>
+                    <img src="{img}">
+                </div>
+            </div>
+        </div>
+        <script src="js/index.js"></script>
+    </body>
+</html>
